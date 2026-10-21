@@ -1,6 +1,7 @@
-    pandas
-    scikit-learn
-    matplotlib
-    joblib
-    fastapi
-    uvicorn[standard]
+fastapi
+uvicorn[standard]
+pandas
+numpy
+scikit-learn
+joblib
+matplotlib
