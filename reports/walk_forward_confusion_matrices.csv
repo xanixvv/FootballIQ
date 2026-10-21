@@ -1,0 +1,190 @@
+model,test_season,actual,predicted,count
+Prior baseline,2023/24,Home win,Home win,175
+Prior baseline,2023/24,Home win,Draw,0
+Prior baseline,2023/24,Home win,Away win,0
+Prior baseline,2023/24,Draw,Home win,82
+Prior baseline,2023/24,Draw,Draw,0
+Prior baseline,2023/24,Draw,Away win,0
+Prior baseline,2023/24,Away win,Home win,123
+Prior baseline,2023/24,Away win,Draw,0
+Prior baseline,2023/24,Away win,Away win,0
+Logistic Regression,2023/24,Home win,Home win,102
+Logistic Regression,2023/24,Home win,Draw,40
+Logistic Regression,2023/24,Home win,Away win,33
+Logistic Regression,2023/24,Draw,Home win,32
+Logistic Regression,2023/24,Draw,Draw,29
+Logistic Regression,2023/24,Draw,Away win,21
+Logistic Regression,2023/24,Away win,Home win,27
+Logistic Regression,2023/24,Away win,Draw,35
+Logistic Regression,2023/24,Away win,Away win,61
+Random Forest,2023/24,Home win,Home win,113
+Random Forest,2023/24,Home win,Draw,25
+Random Forest,2023/24,Home win,Away win,37
+Random Forest,2023/24,Draw,Home win,45
+Random Forest,2023/24,Draw,Draw,11
+Random Forest,2023/24,Draw,Away win,26
+Random Forest,2023/24,Away win,Home win,37
+Random Forest,2023/24,Away win,Draw,23
+Random Forest,2023/24,Away win,Away win,63
+Gradient Boosting,2023/24,Home win,Home win,119
+Gradient Boosting,2023/24,Home win,Draw,22
+Gradient Boosting,2023/24,Home win,Away win,34
+Gradient Boosting,2023/24,Draw,Home win,47
+Gradient Boosting,2023/24,Draw,Draw,9
+Gradient Boosting,2023/24,Draw,Away win,26
+Gradient Boosting,2023/24,Away win,Home win,50
+Gradient Boosting,2023/24,Away win,Draw,19
+Gradient Boosting,2023/24,Away win,Away win,54
+Form + odds (all features),2023/24,Home win,Home win,132
+Form + odds (all features),2023/24,Home win,Draw,25
+Form + odds (all features),2023/24,Home win,Away win,18
+Form + odds (all features),2023/24,Draw,Home win,44
+Form + odds (all features),2023/24,Draw,Draw,21
+Form + odds (all features),2023/24,Draw,Away win,17
+Form + odds (all features),2023/24,Away win,Home win,37
+Form + odds (all features),2023/24,Away win,Draw,21
+Form + odds (all features),2023/24,Away win,Away win,65
+Form + odds (core features),2023/24,Home win,Home win,139
+Form + odds (core features),2023/24,Home win,Draw,19
+Form + odds (core features),2023/24,Home win,Away win,17
+Form + odds (core features),2023/24,Draw,Home win,47
+Form + odds (core features),2023/24,Draw,Draw,13
+Form + odds (core features),2023/24,Draw,Away win,22
+Form + odds (core features),2023/24,Away win,Home win,37
+Form + odds (core features),2023/24,Away win,Draw,17
+Form + odds (core features),2023/24,Away win,Away win,69
+Bookmaker odds (B365),2023/24,Home win,Home win,144
+Bookmaker odds (B365),2023/24,Home win,Draw,0
+Bookmaker odds (B365),2023/24,Home win,Away win,31
+Bookmaker odds (B365),2023/24,Draw,Home win,48
+Bookmaker odds (B365),2023/24,Draw,Draw,0
+Bookmaker odds (B365),2023/24,Draw,Away win,34
+Bookmaker odds (B365),2023/24,Away win,Home win,40
+Bookmaker odds (B365),2023/24,Away win,Draw,0
+Bookmaker odds (B365),2023/24,Away win,Away win,83
+Prior baseline,2024/25,Home win,Home win,155
+Prior baseline,2024/25,Home win,Draw,0
+Prior baseline,2024/25,Home win,Away win,0
+Prior baseline,2024/25,Draw,Home win,93
+Prior baseline,2024/25,Draw,Draw,0
+Prior baseline,2024/25,Draw,Away win,0
+Prior baseline,2024/25,Away win,Home win,132
+Prior baseline,2024/25,Away win,Draw,0
+Prior baseline,2024/25,Away win,Away win,0
+Logistic Regression,2024/25,Home win,Home win,86
+Logistic Regression,2024/25,Home win,Draw,35
+Logistic Regression,2024/25,Home win,Away win,34
+Logistic Regression,2024/25,Draw,Home win,36
+Logistic Regression,2024/25,Draw,Draw,26
+Logistic Regression,2024/25,Draw,Away win,31
+Logistic Regression,2024/25,Away win,Home win,39
+Logistic Regression,2024/25,Away win,Draw,30
+Logistic Regression,2024/25,Away win,Away win,63
+Random Forest,2024/25,Home win,Home win,94
+Random Forest,2024/25,Home win,Draw,23
+Random Forest,2024/25,Home win,Away win,38
+Random Forest,2024/25,Draw,Home win,49
+Random Forest,2024/25,Draw,Draw,11
+Random Forest,2024/25,Draw,Away win,33
+Random Forest,2024/25,Away win,Home win,50
+Random Forest,2024/25,Away win,Draw,17
+Random Forest,2024/25,Away win,Away win,65
+Gradient Boosting,2024/25,Home win,Home win,106
+Gradient Boosting,2024/25,Home win,Draw,20
+Gradient Boosting,2024/25,Home win,Away win,29
+Gradient Boosting,2024/25,Draw,Home win,58
+Gradient Boosting,2024/25,Draw,Draw,11
+Gradient Boosting,2024/25,Draw,Away win,24
+Gradient Boosting,2024/25,Away win,Home win,72
+Gradient Boosting,2024/25,Away win,Draw,9
+Gradient Boosting,2024/25,Away win,Away win,51
+Form + odds (all features),2024/25,Home win,Home win,121
+Form + odds (all features),2024/25,Home win,Draw,15
+Form + odds (all features),2024/25,Home win,Away win,19
+Form + odds (all features),2024/25,Draw,Home win,50
+Form + odds (all features),2024/25,Draw,Draw,18
+Form + odds (all features),2024/25,Draw,Away win,25
+Form + odds (all features),2024/25,Away win,Home win,47
+Form + odds (all features),2024/25,Away win,Draw,26
+Form + odds (all features),2024/25,Away win,Away win,59
+Form + odds (core features),2024/25,Home win,Home win,122
+Form + odds (core features),2024/25,Home win,Draw,12
+Form + odds (core features),2024/25,Home win,Away win,21
+Form + odds (core features),2024/25,Draw,Home win,49
+Form + odds (core features),2024/25,Draw,Draw,16
+Form + odds (core features),2024/25,Draw,Away win,28
+Form + odds (core features),2024/25,Away win,Home win,46
+Form + odds (core features),2024/25,Away win,Draw,21
+Form + odds (core features),2024/25,Away win,Away win,65
+Bookmaker odds (B365),2024/25,Home win,Home win,130
+Bookmaker odds (B365),2024/25,Home win,Draw,0
+Bookmaker odds (B365),2024/25,Home win,Away win,25
+Bookmaker odds (B365),2024/25,Draw,Home win,59
+Bookmaker odds (B365),2024/25,Draw,Draw,0
+Bookmaker odds (B365),2024/25,Draw,Away win,34
+Bookmaker odds (B365),2024/25,Away win,Home win,57
+Bookmaker odds (B365),2024/25,Away win,Draw,0
+Bookmaker odds (B365),2024/25,Away win,Away win,75
+Prior baseline,2025/26,Home win,Home win,162
+Prior baseline,2025/26,Home win,Draw,0
+Prior baseline,2025/26,Home win,Away win,0
+Prior baseline,2025/26,Draw,Home win,104
+Prior baseline,2025/26,Draw,Draw,0
+Prior baseline,2025/26,Draw,Away win,0
+Prior baseline,2025/26,Away win,Home win,114
+Prior baseline,2025/26,Away win,Draw,0
+Prior baseline,2025/26,Away win,Away win,0
+Logistic Regression,2025/26,Home win,Home win,82
+Logistic Regression,2025/26,Home win,Draw,34
+Logistic Regression,2025/26,Home win,Away win,46
+Logistic Regression,2025/26,Draw,Home win,45
+Logistic Regression,2025/26,Draw,Draw,23
+Logistic Regression,2025/26,Draw,Away win,36
+Logistic Regression,2025/26,Away win,Home win,27
+Logistic Regression,2025/26,Away win,Draw,26
+Logistic Regression,2025/26,Away win,Away win,61
+Random Forest,2025/26,Home win,Home win,87
+Random Forest,2025/26,Home win,Draw,24
+Random Forest,2025/26,Home win,Away win,51
+Random Forest,2025/26,Draw,Home win,55
+Random Forest,2025/26,Draw,Draw,15
+Random Forest,2025/26,Draw,Away win,34
+Random Forest,2025/26,Away win,Home win,40
+Random Forest,2025/26,Away win,Draw,16
+Random Forest,2025/26,Away win,Away win,58
+Gradient Boosting,2025/26,Home win,Home win,112
+Gradient Boosting,2025/26,Home win,Draw,11
+Gradient Boosting,2025/26,Home win,Away win,39
+Gradient Boosting,2025/26,Draw,Home win,64
+Gradient Boosting,2025/26,Draw,Draw,6
+Gradient Boosting,2025/26,Draw,Away win,34
+Gradient Boosting,2025/26,Away win,Home win,56
+Gradient Boosting,2025/26,Away win,Draw,9
+Gradient Boosting,2025/26,Away win,Away win,49
+Form + odds (all features),2025/26,Home win,Home win,107
+Form + odds (all features),2025/26,Home win,Draw,26
+Form + odds (all features),2025/26,Home win,Away win,29
+Form + odds (all features),2025/26,Draw,Home win,51
+Form + odds (all features),2025/26,Draw,Draw,16
+Form + odds (all features),2025/26,Draw,Away win,37
+Form + odds (all features),2025/26,Away win,Home win,37
+Form + odds (all features),2025/26,Away win,Draw,25
+Form + odds (all features),2025/26,Away win,Away win,52
+Form + odds (core features),2025/26,Home win,Home win,111
+Form + odds (core features),2025/26,Home win,Draw,26
+Form + odds (core features),2025/26,Home win,Away win,25
+Form + odds (core features),2025/26,Draw,Home win,54
+Form + odds (core features),2025/26,Draw,Draw,15
+Form + odds (core features),2025/26,Draw,Away win,35
+Form + odds (core features),2025/26,Away win,Home win,41
+Form + odds (core features),2025/26,Away win,Draw,21
+Form + odds (core features),2025/26,Away win,Away win,52
+Bookmaker odds (B365),2025/26,Home win,Home win,128
+Bookmaker odds (B365),2025/26,Home win,Draw,0
+Bookmaker odds (B365),2025/26,Home win,Away win,34
+Bookmaker odds (B365),2025/26,Draw,Home win,63
+Bookmaker odds (B365),2025/26,Draw,Draw,0
+Bookmaker odds (B365),2025/26,Draw,Away win,41
+Bookmaker odds (B365),2025/26,Away win,Home win,56
+Bookmaker odds (B365),2025/26,Away win,Draw,0
+Bookmaker odds (B365),2025/26,Away win,Away win,58

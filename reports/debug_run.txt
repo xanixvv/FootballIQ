@@ -1,0 +1,414 @@
+C:\Users\LENOVO\OneDrive\Desktop\FootballIQ\backend\form_features.py:126: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df["DateParsed"] = pd.to_datetime(
+C:\Users\LENOVO\OneDrive\Desktop\FootballIQ\backend\form_features.py:126: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df["DateParsed"] = pd.to_datetime(
+C:\Users\LENOVO\OneDrive\Desktop\FootballIQ\backend\compare_models.py:83: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df["parsed_date"] = pd.to_datetime(
+C:\Users\LENOVO\OneDrive\Desktop\FootballIQ\backend\compare_models.py:83: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df["parsed_date"] = pd.to_datetime(
+Loaded 2020/21: 380 matches (2020-09-12 to 2021-05-23)
+Loaded 2021/22: 380 matches (2021-08-13 to 2022-05-22)
+Loaded 2022/23: 380 matches (2022-08-05 to 2023-05-28)
+Loaded 2023/24: 380 matches (2023-08-11 to 2024-05-19)
+Loaded 2024/25: 380 matches (2024-08-16 to 2025-05-25)
+Loaded 2025/26: 380 matches (2025-08-15 to 2026-05-24)
+
+FootballIQ ù Premier League walk-forward evaluation
+Total matches loaded: 2280
+Features: 14
+
+Matches per season:
+season
+2020/21    380
+2021/22    380
+2022/23    380
+2023/24    380
+2024/25    380
+2025/26    380
+
+
+#################################################################
+TRAIN SEASONS: ['2021/22', '2022/23']
+TEST SEASON: 2023/24
+#################################################################
+Training matches: 760
+Test matches with valid odds: 380
+Test matches excluded for missing/invalid odds: 0
+
+Training target distribution:
+target
+H    0.457
+D    0.230
+A    0.313
+
+Common test target distribution:
+target
+H    0.461
+D    0.216
+A    0.324
+
+============================================================
+Prior baseline ù test season 2023/24
+============================================================
+Training matches: 760
+Test matches: 380
+Accuracy: 0.4605
+Macro F1: 0.2102
+Log loss: 1.0538
+
+Confusion matrix (actual rows; predicted columns):
+             Pred Home  Pred Draw  Pred Away
+Actual Home        175          0          0
+Actual Draw         82          0          0
+Actual Away        123          0          0
+
+Classification report:
+              precision  recall  f1-score  support
+Home win          0.461   1.000     0.631  175.000
+Draw              0.000   0.000     0.000   82.000
+Away win          0.000   0.000     0.000  123.000
+accuracy          0.461   0.461     0.461    0.461
+macro avg         0.154   0.333     0.210  380.000
+weighted avg      0.212   0.461     0.290  380.000
+
+============================================================
+Logistic Regression ù test season 2023/24
+============================================================
+Training matches: 760
+Test matches: 380
+Accuracy: 0.5026
+Macro F1: 0.4807
+Log loss: 1.0230
+
+Confusion matrix (actual rows; predicted columns):
+             Pred Home  Pred Draw  Pred Away
+Actual Home         98         47         30
+Actual Draw         31         32         19
+Actual Away         31         31         61
+
+Classification report:
+              precision  recall  f1-score  support
+Home win          0.612   0.560     0.585  175.000
+Draw              0.291   0.390     0.333   82.000
+Away win          0.555   0.496     0.524  123.000
+accuracy          0.503   0.503     0.503    0.503
+macro avg         0.486   0.482     0.481  380.000
+weighted avg      0.524   0.503     0.511  380.000
+
+============================================================
+Random Forest ù test season 2023/24
+============================================================
+Training matches: 760
+Test matches: 380
+Accuracy: 0.5132
+Macro F1: 0.4720
+Log loss: 1.0109
+
+Confusion matrix (actual rows; predicted columns):
+             Pred Home  Pred Draw  Pred Away
+Actual Home        110         34         31
+Actual Draw         35         23         24
+Actual Away         44         17         62
+
+Classification report:
+              precision  recall  f1-score  support
+Home win          0.582   0.629     0.604  175.000
+Draw              0.311   0.280     0.295   82.000
+Away win          0.530   0.504     0.517  123.000
+accuracy          0.513   0.513     0.513    0.513
+macro avg         0.474   0.471     0.472  380.000
+weighted avg      0.507   0.513     0.509  380.000
+
+============================================================
+Gradient Boosting ù test season 2023/24
+============================================================
+Training matches: 760
+Test matches: 380
+Accuracy: 0.4789
+Macro F1: 0.4154
+Log loss: 1.1306
+
+Confusion matrix (actual rows; predicted columns):
+             Pred Home  Pred Draw  Pred Away
+Actual Home        117         28         30
+Actual Draw         47         14         21
+Actual Away         52         20         51
+
+Classification report:
+              precision  recall  f1-score  support
+Home win          0.542   0.669     0.598  175.000
+Draw              0.226   0.171     0.194   82.000
+Away win          0.500   0.415     0.453  123.000
+accuracy          0.479   0.479     0.479    0.479
+macro avg         0.422   0.418     0.415  380.000
+weighted avg      0.460   0.479     0.464  380.000
+
+
+#################################################################
+TRAIN SEASONS: ['2021/22', '2022/23', '2023/24']
+TEST SEASON: 2024/25
+#################################################################
+Training matches: 1140
+Test matches with valid odds: 380
+Test matches excluded for missing/invalid odds: 0
+
+Training target distribution:
+target
+H    0.458
+D    0.225
+A    0.317
+
+Common test target distribution:
+target
+H    0.408
+D    0.245
+A    0.347
+
+============================================================
+Prior baseline ù test season 2024/25
+============================================================
+Training matches: 1140
+Test matches: 380
+Accuracy: 0.4079
+Macro F1: 0.1931
+Log loss: 1.0826
+
+Confusion matrix (actual rows; predicted columns):
+             Pred Home  Pred Draw  Pred Away
+Actual Home        155          0          0
+Actual Draw         93          0          0
+Actual Away        132          0          0
+
+Classification report:
+              precision  recall  f1-score  support
+Home win          0.408   1.000     0.579  155.000
+Draw              0.000   0.000     0.000   93.000
+Away win          0.000   0.000     0.000  132.000
+accuracy          0.408   0.408     0.408    0.408
+macro avg         0.136   0.333     0.193  380.000
+weighted avg      0.166   0.408     0.236  380.000
+
+============================================================
+Logistic Regression ù test season 2024/25
+============================================================
+Training matches: 1140
+Test matches: 380
+Accuracy: 0.4632
+Macro F1: 0.4424
+Log loss: 1.0485
+
+Confusion matrix (actual rows; predicted columns):
+             Pred Home  Pred Draw  Pred Away
+Actual Home         78         32         45
+Actual Draw         35         27         31
+Actual Away         38         23         71
+
+Classification report:
+              precision  recall  f1-score  support
+Home win          0.517   0.503     0.510  155.000
+Draw              0.329   0.290     0.309   93.000
+Away win          0.483   0.538     0.509  132.000
+accuracy          0.463   0.463     0.463    0.463
+macro avg         0.443   0.444     0.442  380.000
+weighted avg      0.459   0.463     0.460  380.000
+
+============================================================
+Random Forest ù test season 2024/25
+============================================================
+Training matches: 1140
+Test matches: 380
+Accuracy: 0.4474
+Macro F1: 0.4088
+Log loss: 1.0556
+
+Confusion matrix (actual rows; predicted columns):
+             Pred Home  Pred Draw  Pred Away
+Actual Home         90         29         36
+Actual Draw         44         17         32
+Actual Away         46         23         63
+
+Classification report:
+              precision  recall  f1-score  support
+Home win          0.500   0.581     0.537  155.000
+Draw              0.246   0.183     0.210   93.000
+Away win          0.481   0.477     0.479  132.000
+accuracy          0.447   0.447     0.447    0.447
+macro avg         0.409   0.414     0.409  380.000
+weighted avg      0.431   0.447     0.437  380.000
+
+============================================================
+Gradient Boosting ù test season 2024/25
+============================================================
+Training matches: 1140
+Test matches: 380
+Accuracy: 0.4395
+Macro F1: 0.3679
+Log loss: 1.1753
+
+Confusion matrix (actual rows; predicted columns):
+             Pred Home  Pred Draw  Pred Away
+Actual Home        111         18         26
+Actual Draw         61          9         23
+Actual Away         73         12         47
+
+Classification report:
+              precision  recall  f1-score  support
+Home win          0.453   0.716     0.555  155.000
+Draw              0.231   0.097     0.136   93.000
+Away win          0.490   0.356     0.412  132.000
+accuracy          0.439   0.439     0.439    0.439
+macro avg         0.391   0.390     0.368  380.000
+weighted avg      0.411   0.439     0.403  380.000
+
+
+#################################################################
+TRAIN SEASONS: ['2021/22', '2022/23', '2023/24', '2024/25']
+TEST SEASON: 2025/26
+#################################################################
+Training matches: 1520
+Test matches with valid odds: 380
+Test matches excluded for missing/invalid odds: 0
+
+Training target distribution:
+target
+H    0.445
+D    0.230
+A    0.324
+
+Common test target distribution:
+target
+H    0.426
+D    0.274
+A    0.300
+
+============================================================
+Prior baseline ù test season 2025/26
+============================================================
+Training matches: 1520
+Test matches: 380
+Accuracy: 0.4263
+Macro F1: 0.1993
+Log loss: 1.0845
+
+Confusion matrix (actual rows; predicted columns):
+             Pred Home  Pred Draw  Pred Away
+Actual Home        162          0          0
+Actual Draw        104          0          0
+Actual Away        114          0          0
+
+Classification report:
+              precision  recall  f1-score  support
+Home win          0.426   1.000     0.598  162.000
+Draw              0.000   0.000     0.000  104.000
+Away win          0.000   0.000     0.000  114.000
+accuracy          0.426   0.426     0.426    0.426
+macro avg         0.142   0.333     0.199  380.000
+weighted avg      0.182   0.426     0.255  380.000
+
+============================================================
+Logistic Regression ù test season 2025/26
+============================================================
+Training matches: 1520
+Test matches: 380
+Accuracy: 0.4158
+Macro F1: 0.3907
+Log loss: 1.0750
+
+Confusion matrix (actual rows; predicted columns):
+             Pred Home  Pred Draw  Pred Away
+Actual Home         76         37         49
+Actual Draw         48         19         37
+Actual Away         25         26         63
+
+Classification report:
+              precision  recall  f1-score  support
+Home win          0.510   0.469     0.489  162.000
+Draw              0.232   0.183     0.204  104.000
+Away win          0.423   0.553     0.479  114.000
+accuracy          0.416   0.416     0.416    0.416
+macro avg         0.388   0.401     0.391  380.000
+weighted avg      0.408   0.416     0.408  380.000
+
+============================================================
+Random Forest ù test season 2025/26
+============================================================
+Training matches: 1520
+Test matches: 380
+Accuracy: 0.4184
+Macro F1: 0.3826
+Log loss: 1.0830
+
+Confusion matrix (actual rows; predicted columns):
+             Pred Home  Pred Draw  Pred Away
+Actual Home         85         32         45
+Actual Draw         51         15         38
+Actual Away         33         22         59
+
+Classification report:
+              precision  recall  f1-score  support
+Home win          0.503   0.525     0.514  162.000
+Draw              0.217   0.144     0.173  104.000
+Away win          0.415   0.518     0.461  114.000
+accuracy          0.418   0.418     0.418    0.418
+macro avg         0.379   0.395     0.383  380.000
+weighted avg      0.399   0.418     0.405  380.000
+
+============================================================
+Gradient Boosting ù test season 2025/26
+============================================================
+Training matches: 1520
+Test matches: 380
+Accuracy: 0.4447
+Macro F1: 0.3745
+Log loss: 1.1631
+
+Confusion matrix (actual rows; predicted columns):
+             Pred Home  Pred Draw  Pred Away
+Actual Home        114         15         33
+Actual Draw         69         10         25
+Actual Away         58         11         45
+
+Classification report:
+              precision  recall  f1-score  support
+Home win          0.473   0.704     0.566  162.000
+Draw              0.278   0.096     0.143  104.000
+Away win          0.437   0.395     0.415  114.000
+accuracy          0.445   0.445     0.445    0.445
+macro avg         0.396   0.398     0.374  380.000
+weighted avg      0.409   0.445     0.405  380.000
+
+============================================================
+Bookmaker odds baseline ù test season 2025/26
+============================================================
+Matches evaluated: 380
+Accuracy: 0.4895
+Macro F1: 0.3652
+Log loss: 1.0185
+
+Confusion matrix (actual rows; predicted columns):
+             Pred Home  Pred Draw  Pred Away
+Actual Home        128          0         34
+Actual Draw         63          0         41
+Actual Away         56          0         58
+
+Classification report:
+              precision  recall  f1-score  support
+Home win          0.518   0.790     0.626  162.000
+Draw              0.000   0.000     0.000  104.000
+Away win          0.436   0.509     0.470  114.000
+accuracy          0.489   0.489     0.489    0.489
+macro avg         0.318   0.433     0.365  380.000
+weighted avg      0.352   0.489     0.408  380.000
+Class metrics saved to: C:\Users\LENOVO\OneDrive\Desktop\FootballIQ\reports\walk_forward_class_metrics.csv
+Confusion matrices saved to: C:\Users\LENOVO\OneDrive\Desktop\FootballIQ\reports\walk_forward_confusion_matrices.csv
+
+
+===========================================================================
+FINAL SUMMARY ù lower log loss is better
+===========================================================================
+                model  seasons_tested  total_test_matches  mean_accuracy  mean_macro_f1  mean_log_loss
+Bookmaker odds (B365)               1                 380         0.4895         0.3652         1.0185
+    Gradient Boosting               1                 380         0.4447         0.3745         1.1631
+
+Detailed results saved to: C:\Users\LENOVO\OneDrive\Desktop\FootballIQ\reports\walk_forward_results.csv
+Summary saved to: C:\Users\LENOVO\OneDrive\Desktop\FootballIQ\reports\walk_forward_summary.csv

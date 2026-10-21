@@ -1,0 +1,64 @@
+{
+  "model_type": "RandomForestRegressor",
+  "target": "market_value_in_eur",
+  "target_transform": "log1p",
+  "features": [
+    "age",
+    "height_in_cm",
+    "minutes_played_365d",
+    "goals_365d",
+    "assists_365d",
+    "yellow_cards_365d",
+    "red_cards_365d",
+    "position",
+    "sub_position",
+    "foot",
+    "previous_value_eur",
+    "previous_peak_value_eur",
+    "days_since_previous_valuation"
+  ],
+  "numeric_features": [
+    "age",
+    "height_in_cm",
+    "minutes_played_365d",
+    "goals_365d",
+    "assists_365d",
+    "yellow_cards_365d",
+    "red_cards_365d",
+    "previous_value_eur",
+    "previous_peak_value_eur",
+    "days_since_previous_valuation"
+  ],
+  "categorical_features": [
+    "position",
+    "sub_position",
+    "foot"
+  ],
+  "training_rows": 165593,
+  "testing_rows": 65973,
+  "training_start": "2012-07-06",
+  "training_end": "2023-03-30",
+  "testing_start": "2023-03-31",
+  "testing_end": "2026-06-11",
+  "split_cutoff": "2023-03-31",
+  "metrics": {
+    "median_baseline": {
+      "mae_eur": 5208594.803934943,
+      "median_absolute_error_eur": 850000.0,
+      "rmse_eur": 13103154.966640873,
+      "r2": -0.151447382362085
+    },
+    "original_features": {
+      "mae_eur": 4258603.371689699,
+      "median_absolute_error_eur": 972360.4381206186,
+      "rmse_eur": 10555426.36536777,
+      "r2": 0.2527878878219555
+    },
+    "history_enhanced": {
+      "mae_eur": 828352.8278648311,
+      "median_absolute_error_eur": 196410.34370732913,
+      "rmse_eur": 2079992.2724341238,
+      "r2": 0.9709854536154578
+    }
+  }
+}

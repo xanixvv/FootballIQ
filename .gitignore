@@ -1,0 +1,29 @@
+# Python environment and cache
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Frontend dependencies/build output
+frontend/node_modules/
+frontend/dist/
+
+# Local databases and logs
+*.sqlite
+*.db
+*.log
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Large files stored separately
+data/raw/appearances.csv
+models/player_market_value_model.joblib
+data/raw/ucl/source/

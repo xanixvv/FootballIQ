@@ -1,0 +1,20 @@
+{
+  "median_baseline": {
+    "mae_eur": 5208594.803934943,
+    "median_absolute_error_eur": 850000.0,
+    "rmse_eur": 13103154.966640873,
+    "r2": -0.151447382362085
+  },
+  "original_features": {
+    "mae_eur": 4258603.371689699,
+    "median_absolute_error_eur": 972360.4381206186,
+    "rmse_eur": 10555426.36536777,
+    "r2": 0.2527878878219555
+  },
+  "history_enhanced": {
+    "mae_eur": 828352.8278648311,
+    "median_absolute_error_eur": 196410.34370732913,
+    "rmse_eur": 2079992.2724341238,
+    "r2": 0.9709854536154578
+  }
+}
