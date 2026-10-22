@@ -389,7 +389,39 @@ PLAYER_PROFILES_PATH = PROJECT_ROOT / "data" / "raw" / "players.csv"
 PLAYER_HISTORY_PATH = (
     PROJECT_ROOT / "data" / "processed" / "player_market_value_with_history.csv"
 )
+# Download the player market-value model from private Hugging Face
+# only when the model file is missing on this machine.
+if not PLAYER_MODEL_PATH.exists():
+    try:
+        from huggingface_hub import hf_hub_download
 
+        hf_token = os.getenv("HF_TOKEN")
+
+        if not hf_token:
+            raise RuntimeError(
+                "HF_TOKEN is missing from the environment."
+            )
+
+        PLAYER_MODEL_PATH.parent.mkdir(
+            parents=True,
+            exist_ok=True,
+        )
+
+        print("Downloading player market-value model from Hugging Face...")
+
+        hf_hub_download(
+            repo_id="xanixvv/footballiq-player-model",
+            filename="player_market_value_model.joblib",
+            token=hf_token,
+            local_dir=str(PLAYER_MODEL_PATH.parent),
+        )
+
+        print("Player market-value model downloaded successfully.")
+
+    except Exception as exc:
+        print(
+            f"Player market-value model download failed: {exc}"
+        )
 # Keep the match-prediction API usable even if the optional player model has
 # not been trained or its data files have not been created yet. The player
 # endpoints return a clear 503 in that case.
@@ -399,6 +431,8 @@ player_features = []
 player_profiles = pd.DataFrame()
 player_history = pd.DataFrame()
 player_value_load_error = None
+
+
 
 try:
     player_value_model = joblib.load(PLAYER_MODEL_PATH)
