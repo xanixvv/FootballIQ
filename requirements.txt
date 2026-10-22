@@ -6,3 +6,4 @@ scikit-learn
 joblib
 matplotlib
 requests
+huggingface_hub
