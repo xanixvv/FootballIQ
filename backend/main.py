@@ -157,8 +157,9 @@ app = FastAPI(
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
+        "https://football-8clt60y8c-xanixvvs-projects.vercel.app",
         "http://localhost:5173",
-        "https://football-iq-git-main-xanixvvs-projects.vercel.app",
+        "http://127.0.0.1:5173",
     ],
     allow_credentials=True,
     allow_methods=["*"],
