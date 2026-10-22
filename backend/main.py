@@ -432,9 +432,10 @@ player_profiles = pd.DataFrame()
 player_history = pd.DataFrame()
 player_value_load_error = None
 
-
+print("DEBUG: Starting player model initialization", flush=True)
 
 try:
+    print("DEBUG: About to load player model:", PLAYER_MODEL_PATH, flush=True)
     player_value_model = joblib.load(PLAYER_MODEL_PATH)
     with PLAYER_METADATA_PATH.open("r", encoding="utf-8") as file:
         player_value_metadata = json.load(file)
