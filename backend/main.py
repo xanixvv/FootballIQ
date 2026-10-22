@@ -383,7 +383,7 @@ def get_live_predictions():
 # PLAYER MARKET VALUE MODEL
 # --------------------------------------------------
 
-PLAYER_MODEL_PATH = PROJECT_ROOT / "models" / "player_market_value_model.joblib"
+PLAYER_MODEL_PATH = PROJECT_ROOT / "models" / "small_player_value_50trees_depth16.joblib"
 PLAYER_METADATA_PATH = PROJECT_ROOT / "models" / "player_market_value_metadata.json"
 PLAYER_PROFILES_PATH = PROJECT_ROOT / "data" / "raw" / "players.csv"
 PLAYER_HISTORY_PATH = (
@@ -411,7 +411,7 @@ if not PLAYER_MODEL_PATH.exists():
 
         hf_hub_download(
             repo_id="xanixvv/footballiq-player-model",
-            filename="player_market_value_model.joblib",
+            filename="small_player_value_50trees_depth16.joblib",
             token=hf_token,
             local_dir=str(PLAYER_MODEL_PATH.parent),
         )
