@@ -383,7 +383,7 @@ def get_live_predictions():
 # PLAYER MARKET VALUE MODEL
 # --------------------------------------------------
 
-PLAYER_MODEL_PATH = PROJECT_ROOT / "models" / "small_player_value_50trees_depth16.joblib"
+PLAYER_MODEL_PATH = PROJECT_ROOT / "models" / "small_player_value_30trees_depth12.joblib"
 PLAYER_METADATA_PATH = PROJECT_ROOT / "models" / "player_market_value_metadata.json"
 PLAYER_PROFILES_PATH = PROJECT_ROOT / "data" / "raw" / "players.csv"
 PLAYER_HISTORY_PATH = (
@@ -411,7 +411,7 @@ if not PLAYER_MODEL_PATH.exists():
 
         hf_hub_download(
             repo_id="xanixvv/footballiq-player-model",
-            filename="small_player_value_50trees_depth16.joblib",
+            filename="small_player_value_30trees_depth12.joblib",
             token=hf_token,
             local_dir=str(PLAYER_MODEL_PATH.parent),
         )
@@ -699,6 +699,8 @@ def predict_player_market_value(player_id: int):
         raw_prediction = float(
             np.asarray(player_value_model.predict(input_data)).reshape(-1)[0]
         )
+
+        predicted_value_eur = max(0.0, float(np.expm1(raw_prediction)))
 
         # The model was trained on log1p(market_value_in_eur).
         # Convert its prediction back into euros.
